@@ -42,6 +42,81 @@
         }
         
         /* Header & Navigation */
+* ===== SLIM NAV — 22px, green, no brand, no border ===== */
+        nav {
+            position: sticky;
+            top: 0;
+            background: var(--hero-green);
+            z-index: 1000;
+            border-bottom: none;
+            padding: 0;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            overflow: visible;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            height: 100%;
+        }
+
+        #menu-toggle {
+            display: none;
+            margin-right: auto;
+            font-size: 0.9rem;
+            line-height: 1;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        #nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        #nav-links a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            font-size: 0.8rem;
+            line-height: 1;
+            display: block;
+        }
+
+        #nav-links a:hover { color: var(--accent); }
+
+        #nav-links .nav-cta {
+            background-color: var(--accent);
+            color: var(--primary);
+            padding: 0.1rem 0.6rem;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.75rem;
+        }
+
+
+
+        
         .navbar {
             background-color: var(--light);
             box-shadow: var(--light);
@@ -102,24 +177,7 @@
             position: relative;
         }
         
-        .nav-links a:hover {
-            color: #ffffff;
-        }
-        
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--light);
-            transition: width 0.3s ease;
-        }
-        
-        .nav-links a:hover::after {
-            width: 100%;
-        }
+
         
         .btn {
             display: inline-block;
@@ -840,9 +898,7 @@
         <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 1rem; background-color: var(--light);" >
             
             <!-- Logo -->
-            <a href="#" style="font-size: 1.5rem; font-weight: bold; color: #ffffff; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; background:var(--light);">
-                <i class="fas fa-utensils"></i> MEALCARTA
-            </a>
+            
     
             <!-- Hamburger Button -->
             <button onclick="toggleMenu()" style="font-size: 1.5rem; background: transparent; border: none; cursor: pointer; display: none; color: white;" id="menu-toggle">
